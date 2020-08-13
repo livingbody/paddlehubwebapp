@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='favicon.ico') }}">
+    <title>人像抠图 -- livingbody</title>
+</head>
+<body>
+<div clas="container">
+    <!-- Static navbar -->
+ <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
+                        aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="/">PaddlePaddle</a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li><a href="zhengjianzhao">证件照服务</a></li>
+                    <li><a href="koutu">抠图服务</a></li>
+                    <li><a href="meiyan">美颜服务</a></li>
+                    <li><a href="yanzhi">颜值服务</a></li>
+                    <li ><a href="ocr">OCR服务</a></li>
+                    <li class="active"><a href="poetry">写诗服务</a></li>
+                </ul>
+            </div><!--/.nav-collapse -->
+        </div><!--/.container-fluid -->
+    </nav>
+
+    <div class="jumbotron container">
+        <h1>证件照服务</h1>
+        <p class="lead">这是使用PaddleHub来提供的服务。你可以上传照片，实现快速证件照，感谢班班、各位代课老师、各位助教。 author: <strong>livingbody</strong></p>
+    </div>
+    <div class="container">
+        <form class="form-horizontal" action="" enctype='multipart/form-data' method='POST'>
+            <div class="form-group">
+                <label class="col-sm-2 control-label">背景色选择</label>
+                <div class="col-sm-2">
+                    <select class="form-control" name="selected_color">
+                        <option value="1">红色</option>
+                        <option value="2">蓝色</option>
+                        <option value="3">白色</option>
+                    </select>
+                </div>
+
+                <label class="col-sm-2 control-label" for="file">照片上传</label>
+                <div class="col-sm-3">
+                    <input type="file" id="file" name="file">
+                </div>
+                <div class="col-sm-3">
+                    <button type="submit" class="btn btn-primary">更换背景
+                    </button>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="container">
+        <img class="col-md-6 img-responsive  img-thumbnail" src="{{ sourcefile }}"
+             alt="你的图片被外星人劫持了～～"/>
+        <a href="{{ filename }}" download="mypic.jpg">
+            <img class="col-md-6 img-responsive  img-thumbnail" src="{{ filename }}"
+                 alt="你的图片被外星人劫持了～～ "/>
+        </a>
+    </div>
+</div>
+{% extends "bootstrap/base.html" %}
+{% block content %} {% endblock %}
+{% block myjs %} {% endblock %}
+</body>
+</html>
+

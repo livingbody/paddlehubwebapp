@@ -1,0 +1,33 @@
+{
+  "modules_info": {
+    "face_landmark_localization": {
+      "init_args": {
+        "version": "1.0.2"
+      },
+      "predict_args": {
+        "batch_size": 1,
+        "use_gpu": false
+      }
+    },
+    "deeplabv3p_xception65_humanseg": {
+      "init_args": {
+        "version": "1.0.0"
+      },
+      "predict_args": {
+        "batch_size": 1,
+        "use_gpu": false
+      }
+    },
+    "ernie_gen_couplet": {
+      "init_args": {
+        "version": "1.0.0"
+      },
+      "predict_args": {
+        "use_gpu": false
+      }
+    }
+  },
+  "port": 8866,
+  "use_multiprocess": false,
+  "workers": 2
+}
