@@ -11,7 +11,7 @@
     },
     "deeplabv3p_xception65_humanseg": {
       "init_args": {
-        "version": "1.0.0"
+        "version": "1.1.1"
       },
       "predict_args": {
         "batch_size": 1,

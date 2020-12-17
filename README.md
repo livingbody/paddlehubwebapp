@@ -55,7 +55,15 @@ hub serving start --config config.json
 python app.py
 ```
 
-![Image text](微信图片_20200503142919.png)
-![Image text](微信截图_20200505205858.png)
-![Image text](微信截图_20200505205912.png)
-![Image text](微信截图_20200507173758.png)7173758.png)
+![Image text](20200508002203939.png)
+![Image text](20200508002228512.png)
+![Image text](20200508002325959.png)
+
+## step 9. 增加进程监控
+
+> https://github.com/livingbody/fangtanginuse
+
+### ![Image text](20201217140937684.jpg)
+
+![](20201217140937702.jpg)
+
